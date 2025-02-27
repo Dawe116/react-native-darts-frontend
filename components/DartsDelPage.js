@@ -29,7 +29,7 @@ export function DartsDelPage() {
   const handleDelete = async () => {
     try {
       await axios.delete(`https://darts.sulla.hu/darts/${id}`);
-      Alert.alert('Success', 'Dartsozó törölve!', [{ text: 'OK', onPress: () => navigation.navigate('DartsList') }]);
+      Alert.alert('Success', 'Dartsozó törölve!', [{ text: 'OK', onPress: () => navigation.navigate('DartsListPage') }]);
     } catch (error) {
       console.error(error);
       Alert.alert('Error', 'Hiba történt a törlés során.');
@@ -49,7 +49,7 @@ export function DartsDelPage() {
             style={{ width: 300, height: 400, borderRadius: 10, marginVertical: 10 }}
           />
           <View style={{ flexDirection: 'row', marginTop: 20 }}>
-            <Button title="Mégsem" onPress={() => navigation.navigate('DartsList')} />
+            <Button title="Mégsem" onPress={() => navigation.navigate('DartsListPage')} />
             <View style={{ width: 10 }} /> {/* Spacer */}
             <Button title="Törlés" onPress={handleDelete} color="red" />
           </View>

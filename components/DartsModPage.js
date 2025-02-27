@@ -41,7 +41,7 @@ export function DartsModPage() {
   const handleSubmit = async () => {
     try {
       await axios.put(`https://darts.sulla.hu/darts/${id}`, darts);
-      Alert.alert('Success', 'Dartsozó módosítva!', [{ text: 'OK', onPress: () => navigation.navigate('DartsList') }]);
+      Alert.alert('Success', 'Dartsozó módosítva!', [{ text: 'OK', onPress: () => navigation.navigate('DartsListPage') }]);
     } catch (error) {
       console.log('Error updating darts data:', error);
     }

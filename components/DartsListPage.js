@@ -3,7 +3,7 @@ import { View, Text, Image, ActivityIndicator, ScrollView, StyleSheet, Touchable
 import axios from 'axios';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
-export function DartsListPage() {
+export function  DartsListPage (){
   const [dartses, setDartses] = useState([]);
   const [isFetchPending, setFetchPending] = useState(false);
   const navigation = useNavigation();

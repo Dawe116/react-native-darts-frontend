@@ -17,7 +17,7 @@ export function DartsCreatePage() {
     axios.post('https://darts.sulla.hu/darts', form)
       .then(() => {
         Alert.alert('Success', 'Sakkozó added successfully!', [
-          { text: 'OK', onPress: () => navigation.navigate('DartsList') }
+          { text: 'OK', onPress: () => navigation.navigate('DartsListPage') }
         ]);
       })
       .catch((error) => {
